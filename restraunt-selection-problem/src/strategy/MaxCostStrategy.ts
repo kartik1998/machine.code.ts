@@ -3,7 +3,7 @@ import { IStrategy } from './IStrategy';
 
 export default class MinCostStrategy extends IStrategy {
   constructor() {
-    super('minCost');
+    super('highCost');
   }
   /**
    * @override
