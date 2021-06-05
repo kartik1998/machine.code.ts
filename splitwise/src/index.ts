@@ -1,14 +1,22 @@
 import prompt from 'prompt-sync';
-import User from './user/user';
+import User from './entities/user';
+import Group from './entities/group';
+import SplitWise from './split-wise';
 
-const scan = prompt();
+SplitWise.addUser(new User('u1', 22));
+SplitWise.addUser(new User('u2', 23));
+SplitWise.addUser(new User('u3', 21));
+SplitWise.addGroup(new Group(SplitWise.getUsers()));
 
-let testCases = Number(scan());
+console.dir(SplitWise, { depth: null });
+// const scan = prompt();
 
-while (testCases-- > 0) {
-  const A = scan()
-    .split(' ')
-    .map((num) => parseInt(num));
-  const user = new User('ken', A[0]);
-  console.log(user);
-}
+// let testCases = Number(scan());
+
+// while (testCases-- > 0) {
+//   const A = scan()
+//     .split(' ')
+//     .map((num) => parseInt(num));
+//   const user = new User('ken', A[0]);
+//   console.log(user);
+// }
