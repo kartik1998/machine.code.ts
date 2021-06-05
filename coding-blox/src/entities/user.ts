@@ -1,24 +1,23 @@
 export default class User {
-  private name: string = 'unknown';
-  private age: number = 20;
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
+  private userName: string;
+  private points: number = 1500;
+  constructor(userName: string) {
+    this.userName = userName;
   }
 
-  public setName(name: string): void {
-    this.name = name;
+  public setUserName(userName: string): void {
+    this.userName = userName;
   }
 
-  public getName(): string {
-    return this.name;
+  public getUserName(): string {
+    return this.userName;
   }
 
-  public setAge(age: number): void {
-    this.age = age;
+  public getPoints(): number {
+    return this.points;
   }
 
-  public getAge(): number {
-    return this.age;
+  public setPoints(points: number): void {
+    this.points = points;
   }
 }

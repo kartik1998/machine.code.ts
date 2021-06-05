@@ -1,23 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class User {
-    constructor(name, age) {
-        this.name = 'unknown';
-        this.age = 20;
-        this.name = name;
-        this.age = age;
+    constructor(userName) {
+        this.points = 1500;
+        this.userName = userName;
     }
-    setName(name) {
-        this.name = name;
+    setUserName(userName) {
+        this.userName = userName;
     }
-    getName() {
-        return this.name;
+    getUserName() {
+        return this.userName;
     }
-    setAge(age) {
-        this.age = age;
+    getPoints() {
+        return this.points;
     }
-    getAge() {
-        return this.age;
+    setPoints(points) {
+        this.points = points;
     }
 }
 exports.default = User;

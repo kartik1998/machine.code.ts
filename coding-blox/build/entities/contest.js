@@ -1,13 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const utils_1 = require("../lib/utils");
 class Contest {
-    constructor(level) {
+    constructor(contestName, level, createrName, contestId) {
         this.questionsList = [];
-        this.id = utils_1.createId();
-        if (!['LOW', 'MEDIUM', 'HIGH'].includes(level))
-            throw new Error('Invalid level passed ' + level);
+        this.attendeeList = [];
         this.level = level;
+        this.contestName = contestName;
+        this.createrName = createrName;
+        this.contestId = contestId;
+    }
+    addAttendee(user) {
+        this.attendeeList.push(user);
+    }
+    getLevel() {
+        return this.level;
+    }
+    getCreaterName() {
+        return this.createrName;
+    }
+    getContestName() {
+        return this.contestName;
     }
     addQuestion(question) {
         if (this.questionsList.includes(question))

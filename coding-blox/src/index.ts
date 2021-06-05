@@ -1,18 +1,11 @@
 import prompt from 'prompt-sync';
-import Contest from './entities/contest';
-import Question from './entities/question';
-import User from './entities/user';
+import CodingBlox from './coding-blox-controller';
 
-const q1 = new Question(null, 'LOW');
-const q2 = new Question(null, 'MEDIUM');
-const q3 = new Question(null, 'MEDIUM');
+CodingBlox.createUser('Kartik');
+CodingBlox.createUser('Rehan');
 
-const c1 = new Contest('LOW');
-
-c1.addQuestion(q1);
-c1.addQuestion(q2);
-c1.addQuestion(q3);
-console.log(c1);
+CodingBlox.createContest('2021-s7up', 'MEDIUM', 'Kartik');
+console.dir(CodingBlox, { depth: null });
 // const scan = prompt();
 
 // let testCases = Number(scan());

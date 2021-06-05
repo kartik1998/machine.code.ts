@@ -1,14 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const utils_1 = require("../lib/utils");
 class Question {
-    constructor(meta = { title: 'unknown' }, level) {
+    constructor(level, score, id, meta = { title: '' }) {
         this.meta = meta;
         this.level = level;
-        this.id = utils_1.createId();
+        this.id = id;
+        this.score = score;
     }
     getId() {
         return this.id;
+    }
+    getScore() {
+        return this.score;
+    }
+    getMeta() {
+        return this.meta;
     }
     getLevel() {
         return this.level;
