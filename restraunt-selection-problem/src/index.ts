@@ -1,14 +1,5 @@
-import prompt from 'prompt-sync';
-import User from './user/user';
+import User from './entities/user';
 
-const scan = prompt();
-
-let testCases = Number(scan());
-
-while (testCases-- > 0) {
-  const A = scan()
-    .split(' ')
-    .map((num) => parseInt(num));
-  const user = new User('ken', A[0]);
-  console.log(user);
-}
+const Kartik = new User('Kartik', 22);
+const Meher = new User('Meher', 23);
+const Rehan = new User('Rehan', 0);
