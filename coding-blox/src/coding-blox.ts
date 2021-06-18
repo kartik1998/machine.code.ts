@@ -25,22 +25,30 @@ export default class CodingBlox {
     return this.contestInventory.addContest(contest);
   }
 
-  public static listContest(level: LEVEL | undefined = undefined): void {
+  public static attendContest(contest: Contest, user: User): boolean {
+    return contest.attendContest(user);
+  }
+
+  public static runContest(contest: Contest, user: User) {
+    const questions = this.listQuestion('LOW');
+    return contest.runContest(user, questions);
+  }
+
+  public static listContest(level: LEVEL | undefined = undefined) {
     if (!level) {
       this.printContestList();
-      return;
+      return this.contestInventory.getContestList();
     }
     const contests: Array<Contest> = [];
     this.contestInventory.getContestList().forEach((contest) => {
       if (contest.getLevel() === level) contests.push(contest);
     });
-    console.log(contests);
+    return contests;
   }
 
-  public static listQuestion(level: LEVEL | undefined = undefined): void {
+  public static listQuestion(level: LEVEL | undefined = undefined) {
     if (!level) {
-      this.printQuestionList();
-      return;
+      return this.questionInventory.getQuestionList();
     }
     const questions: Array<Question> = [];
     this.questionInventory.getQuestionList().forEach((question) => {
@@ -48,7 +56,7 @@ export default class CodingBlox {
         questions.push(question);
       }
     });
-    console.log(questions);
+    return questions;
   }
   /**
    * @support methods
