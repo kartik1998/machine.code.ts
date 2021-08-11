@@ -1,9 +1,11 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const coding_blox_1 = __importDefault(require("./coding-blox"));
+'use strict';
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
+Object.defineProperty(exports, '__esModule', { value: true });
+const coding_blox_1 = __importDefault(require('./coding-blox'));
 coding_blox_1.default.createUser('Kartik');
 coding_blox_1.default.createUser('Rehan');
 coding_blox_1.default.createUser('Ahana');

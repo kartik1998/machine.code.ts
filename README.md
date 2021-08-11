@@ -1,1 +1,1 @@
-## Low level design problems solved in typescript 
+## Low level design problems solved in typescript

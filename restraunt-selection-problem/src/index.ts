@@ -8,16 +8,24 @@ const Kartik = new User('Kartik', 22);
 const Meher = new User('Meher', 23);
 const Rehan = new User('Rehan', 0);
 
-const haldirams = new Restraunt('haldirams', {
-  "Dahi Bhalle": 140,
-  "Masala Dosa": 100,
-  "Maggi": 35,
-  "Chole Bhature": 60
-}, 3);
+const haldirams = new Restraunt(
+  'haldirams',
+  {
+    'Dahi Bhalle': 140,
+    'Masala Dosa': 100,
+    Maggi: 35,
+    'Chole Bhature': 60,
+  },
+  3,
+);
 
-const mechc = new Restraunt('mechc', {
-  "Dahi Bhalle": 120
-}, 2);
+const mechc = new Restraunt(
+  'mechc',
+  {
+    'Dahi Bhalle': 120,
+  },
+  2,
+);
 
 RestrauntController.addRestraunt(haldirams);
 RestrauntController.addRestraunt(mechc);

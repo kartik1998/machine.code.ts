@@ -13,6 +13,6 @@ export default class SplitWise {
     if (!this.groups.push(group)) this.groups.push(group);
   }
   public static getUsers(): Array<User> {
-      return this.users;
+    return this.users;
   }
 }

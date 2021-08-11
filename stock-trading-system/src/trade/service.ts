@@ -8,7 +8,7 @@ class TradeService {
     } else if (order.place.toLowerCase() === 'buy') {
       return this.handleBuyOrder(order);
     } else {
-      throw new Error('Invalid order place string. Only buy and sell allowed.')
+      throw new Error('Invalid order place string. Only buy and sell allowed.');
     }
   }
 
